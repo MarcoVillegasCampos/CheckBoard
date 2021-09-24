@@ -5,25 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/statics/css/styles.css">
     <title>Playground 1 </title>
 </head>
+<style>
+    table tr td {
+        width: 75px;
+        height: 75px;
 
+    }
+
+    .color1 {
+        background-color: blanchedalmond;
+
+
+    }
+
+    .color2 {
+        background-color: brown;
+    }
+</style>
 
 <body>
+  
     <table>
-        {% for x in range (x)%}
+        {% for i in range (0,x)%}
         <tr>
-            {%for y in range(y)%}
-            <td class='color{{(x+y)%2+1}}'>
+            {%for z in range(0,y)%}
+                {% if(z+i)%2==0%}
+                    <td style="background-color: {{color1}};"></td>
+                {% else %}
+                <td style="background-color: {{color2}};"></td>
+                {% endif %}
 
-            </td>
-            
+
+
+
             {%endfor%}
 
         </tr>
         {%endfor%}
-        
+
 
 
 
